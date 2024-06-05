@@ -1,0 +1,75 @@
+/* Форма */
+.form-container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--form-bg-color);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--form-text-color);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--form-text-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--form-input-bg-color);
+    color: var(--form-input-text-color);
+}
+
+.form-control-file {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--form-input-bg-color);
+    color: var(--form-input-text-color);
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--form-button-bg-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: var(--form-button-hover-bg-color);
+}
+
+.form-error {
+    color: #dc3545;
+    margin-bottom: 15px;
+    text-align: center;
+}

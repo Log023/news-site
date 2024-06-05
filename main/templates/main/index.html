@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="news-container">
+    {% for article in news %}
+    <div class="news-item">
+      <a href="{% url 'article_detail' article.pk %}">
+        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid news-image">
+        <div class="news-text">
+          <h2 class="news-title">{{ article.title }}</h2>
+          <p class="news-intro">{{ article.intro }}</p>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
