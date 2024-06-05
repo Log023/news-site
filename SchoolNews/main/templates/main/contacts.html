@@ -1,0 +1,30 @@
+{% extends 'C:/123/SchoolNews/SchoolNews/main/templates/main/layout.html' %}
+{% load static %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="contacts">
+    <h2>Юридический адрес</h2>
+    <p>
+        Почтовый индекс: 180559<br>
+        Адрес: 180559, Псковская область, Псковский район, д. Родина, ул. Школьная, д.3
+    </p>
+    <h2>Телефоны</h2>
+    <p>
+        <strong>Телефон:</strong> (8112) 673120, 673016<br>
+        <strong>Факс:</strong> (8112) 673120
+    </p>
+    <h2>E-mail</h2>
+    <p>
+        <strong>E-mail:</strong> org186@pskovedu.ru
+    </p>
+</div>
+
+<!-- Добавление карты -->
+<div id="map" style="width: 500px; height: 400px; border-radius: 10px; overflow: hidden;"></div>
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="{% static 'main/js/map.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'C:\\123\\SchoolNews\\SchoolNews\\main\\templates\\main\\layout.html' %}
+{% load static %}
+{% block title %}Форма по добавлению статьи{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title">Добавление статьи</h2>
+    <form method="post" enctype="multipart/form-data" class="form-content">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">Заголовок</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.intro.id_for_label }}">Введение</label>
+            {{ form.intro }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.full_text.id_for_label }}">Полный текст</label>
+            {{ form.full_text }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.date.id_for_label }}">Дата</label>
+            {{ form.date }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.image.id_for_label }}">Изображение</label>
+            {{ form.image }}
+        </div>
+
+        {% if error %}
+        <div class="form-error">
+            {{ error }}
+        </div>
+        {% endif %}
+        <button class="form-button" type="submit">Добавить статью</button>
+    </form>
+</div>
+<script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock %}
